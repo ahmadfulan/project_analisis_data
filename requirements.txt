@@ -1,5 +1,4 @@
-NumPy version: 1.23.5
-Pandas version: 1.5.3
-Matplotlib version: 3.7.1
-Seaborn version: 0.12.2
-Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+pandas
+matplotlib
+seaborn
+streamlit
