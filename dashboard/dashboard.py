@@ -151,7 +151,7 @@ weather_rent_df = create_weather_rent_df(main_df)
 # Create Comprehensive Dashboard
 
 # Create title
-st.header('Bike Rental Dashboard 🚲')
+st.header('Bike Rental Dashboard')
 
 # Create daily rental count
 st.subheader('Daily Rentals')
