@@ -124,14 +124,19 @@ max_date = pd.to_datetime(day_df['dateday']).dt.date.max()
 with st.sidebar:
     st.title("Date Range Selector")
 
-    # Assume default_start_date and default_end_date are defined earlier
+    # Set the default start and end date to January 2011 and December 2012
+    default_start_date = datetime.date(2011, 1, 1)
+    default_end_date = datetime.date(2012, 12, 31)
+
     start_date, end_date = st.date_input(
         "Select a date range",
-        (datetime.date(2023, 1, 1), datetime.date(2023, 12, 31))
+        (default_start_date, default_end_date)
     )
 
 # Main content
 st.write(f"Selected Date Range: {start_date} to {end_date}")
+
+
 main_df = day_df[(day_df['dateday'] >= str(start_date)) & 
                 (day_df['dateday'] <= str(end_date))]
 
