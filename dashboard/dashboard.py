@@ -308,4 +308,4 @@ sumbu2[2].tick_params(axis='y', labelsize=10)
 plt.tight_layout()
 st.pyplot(figur)
 
-st.caption('Hak Cipta @ 2023 Dimas Raihan Pratama')
+st.caption('Copyright @ 2023 Dimas Raihan Pratama')
