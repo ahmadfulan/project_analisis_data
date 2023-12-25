@@ -40,4 +40,7 @@
 4. Open Visual Studio Code (VSCode) and execute the file by navigating to the terminal, then input streamlit run dashboard.py.
 
 ## C. Dashboard Screenshots
-
+![plot](./image/data1.png)
+![plot](./image/data2.png)
+![plot](./image/data3.png)
+![plot](./image/data4.png)
