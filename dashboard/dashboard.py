@@ -5,6 +5,7 @@ import streamlit as st
 import base64
 from io import BytesIO
 from PIL import Image
+import datetime
 
 # Set style seaborn
 sns.set(style='dark')
@@ -119,27 +120,18 @@ def create_weather_rent_df(df):
 min_date = pd.to_datetime(day_df['dateday']).dt.date.min()
 max_date = pd.to_datetime(day_df['dateday']).dt.date.max()
  
-# Create a simple image
-image = Image.new('RGB', (100, 100), color='red')
+# Sidebar
+with st.sidebar:
+    st.title("Date Range Selector")
 
-# Save the image to a BytesIO object
-buffer = BytesIO()
-image.save(buffer, format='PNG')
-
-# Get the base64-encoded string
-base64_image_data = base64.b64encode(buffer.getvalue()).decode('utf-8')
-
-# Display the encoded string
-print('data:image/png;base64,' + base64_image_data)
-
-    # Mengambil start_date & end_date dari date_input
+    # Assume default_start_date and default_end_date are defined earlier
     start_date, end_date = st.date_input(
-        label='Rentang Waktu',
-        min_value= min_date,
-        max_value= max_date,
-        value=[min_date, max_date]
+        "Select a date range",
+        (datetime.date(2023, 1, 1), datetime.date(2023, 12, 31))
     )
 
+# Main content
+st.write(f"Selected Date Range: {start_date} to {end_date}")
 main_df = day_df[(day_df['dateday'] >= str(start_date)) & 
                 (day_df['dateday'] <= str(end_date))]
 
