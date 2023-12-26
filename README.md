@@ -24,3 +24,8 @@ The dataset is available in the `data` directory. Two CSV files, `day.csv` and `
 
 ```bash
 jupyter notebook Dimas_Raihan_Pratama_Bike_Sharing.ipynb
+```
+## Running the Streamlit
+```bash
+streamlit run dashboard.py
+```
